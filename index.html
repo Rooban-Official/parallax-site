@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Parallax Website</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+</style>
+<style type="text/css">
+	* {
+		padding: 0;
+		margin: 0;
+		overflow-x: hidden;
+		scroll-behavior: smooth;
+	}
+	.light {
+		background-color: #b3b3b3;
+	}
+	.dark {
+		background-color: #404040;
+		color: white;
+	}
+	.first-div{
+		min-height: 80vh;
+		background-color: white;
+		opacity: 0.8;
+		background-image: url(wallpaper.jpg);
+		background-position: center;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	.second-div{
+		min-height: 80vh;
+		background-color: white;
+		opacity: 0.8;
+		background-image: url(wallpaper2.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	.third-div{
+		min-height: 80vh;
+		background-color: white;
+		opacity: 0.8;
+		background-image: url(wallpaper3.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	.fourth-div{
+		min-height: 80vh;
+		background-color: white;
+		opacity: 0.8;
+		background-image: url(wallpaper4.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	.first-sec, .second-sec, .third-sec, .fourth-div{
+		margin: 0 -5px;	
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		word-spacing: 5px;
+		letter-spacing: 1px;
+		align-items: center;
+		min-height: 60vh;
+		padding: 0 40px;
+	}
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.first-div h1{
+		color: white;
+		padding: 10px 60px;
+		font-size: 2rem;
+		 letter-spacing: 6px;	
+		 font-family: 'Poppins', sans-serif;
+		 
+	}
+	.second-div h1, .third-div h1, .fourth-div h1 {
+		color: white;
+		font-family: 'Poppins', sans-serif;
+	}
+
+aside {
+	position: fixed;
+	bottom: 30px;
+	display: flex;
+	left: 40%;
+}
+
+aside .dot {
+	margin: 0 10px;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+aside span a{
+	cursor: pointer;
+}
+aside span.active {
+	background-color: black;
+}
+aside span:hover {
+	background-color: black;
+}
+</style>
+<body>
+	<div class="first-div" id="first">
+		<h1 class="dark">Rooban</h1>
+	</div>
+	<section class="first-sec light">
+		<h2>Section One</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum temporibus. Laborum ad temporibus ex, omnis!</p>
+	</section>
+	<div class="second-div" id="second">
+		<h1>Second-div</h1>
+	</div>
+	<section class="second-sec dark">
+		<h2>Section Two</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum temporibus. Laborum ad temporibus ex, omnis!	</p>
+	</section>
+	<div class="third-div" id="third">
+		<h1>third-div</h1>
+	</div>
+	<section class="third-sec light"> 
+		<h2>Section Three	</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, laudantium, quibusdam? Nobis, delectus, commodi, fugit amet tempora facere dolores nisi facilis consequatur, odio hic minima nostrum. Perferendis eos earum praesentium, blanditiis sapiente labore aliquam ipsa architecto vitae. Minima soluta temporibus voluptates inventore commodi cumque esse suscipit optio aliquam et, dolorem a cupiditate nihil fuga laboriosam fugiat placeat dignissimos! Unde eveniet placeat quisquam blanditiis voluptatem doloremque fugiat dolor repellendus ratione in. Distinctio provident dolorem modi cumque illo enim quidem tempora deserunt nostrum voluptate labore repellat quisquam quasi cum suscipit dolore ab consequuntur, ad porro earum temporibus. Laborum ad temporibus ex, omnis!</p>
+	</section>
+	<div class="fourth-div" id="fourth">
+		<h1>fourth-div</h1>
+	</div>
+	
+	<aside>
+		<a href= "#first"><span class="dot active"></span></a>
+		<a href="#second"><span class="dot"></span></a>
+		<a href="#third"><span class="dot"></span></a>
+		<a href="#fourth"><span class="dot"></span></a>
+	</aside>
+
+</div>
+</body>
+<script>
+	
+	
+
+</script>
+
+</html>
