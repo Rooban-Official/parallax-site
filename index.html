@@ -137,18 +137,27 @@ aside span:hover {
 		<h1>fourth-div</h1>
 	</div>
 	
-	<aside>
+	<aside id="aside">
 		<a href= "#first"><span class="dot active"></span></a>
-		<a href="#second"><span class="dot"></span></a>
-		<a href="#third"><span class="dot"></span></a>
-		<a href="#fourth"><span class="dot"></span></a>
+		<a href="#second"><span class="dot "></span></a>
+		<a href="#third"><span class="dot "></span></a>
+		<a href="#fourth"><span class="dot "></span></a>
 	</aside>
 
 </div>
 </body>
 <script>
 	
-	
+	var nav = document.getElementById("aside");
+	var btns = nav.getElementsByClassName("dot");
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener("click", function() {
+			var current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace("active", " ");
+			this.className += "active";
+		});
+	}
+
 
 </script>
 
